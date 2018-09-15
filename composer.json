@@ -1,0 +1,17 @@
+{
+    "name": "itdream/image",
+    "description": "A image SDk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "itdream",
+            "email": "z@it1.me"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Itdream\\Image\\": "./src/"
+        }
+    },
+    "require": {}
+}
