@@ -22,7 +22,7 @@ class Image
     // 输出图片类型
     protected $dst_type;
 
-    public function __construct($bg_img, $echo_img_path, $dst_type = 2)
+    public function __construct($bg_img, $echo_img_path, $dst_type = 'JPG')
     {
         // 设置背景图片
         $this->bg_img = $bg_img;
@@ -129,18 +129,18 @@ class Image
         $echo_img_path = $this->echo_img_path;
         $dst_type = $this->dst_type;
         switch ($dst_type) {
-            case 1://GIF
+            case 'GIF'://GIF
                 header('Content-Type: image/gif');
                 imagegif($dst, 'test.gif');
 
                 break;
-            case 2://JPG
+            case 'JPG'://JPG
                 header('Content-Type: image/jpeg');
 //                imagejpeg($dst,public_path('test.jpg'));
                 imagejpeg($dst, $echo_img_path);
 
                 break;
-            case 3://PNG
+            case 'PNG'://PNG
                 header('Content-Type: image/png');
                 imagepng($dst, public_path('test.png'));
 
